@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build"
+     ToolsVersion="4.0"
+     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup Label="ProjectConfigurations">
+        <ProjectConfiguration Include="Debug|x64">
+            <Configuration>Debug</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+        <ProjectConfiguration Include="Release|x64">
+            <Configuration>Release</Configuration>
+            <Platform>x64</Platform>
+        </ProjectConfiguration>
+    </ItemGroup>
+    <PropertyGroup Label="Globals">
+        <ProjectGuid>{C00CB574-F730-3182-991B-ADC584EAFD05}</ProjectGuid>
+        <RootNamespace>ZESSDRR_CUDA</RootNamespace>
+        <Keyword>Qt4VSv1.0</Keyword>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"
+         Label="Configuration">
+        <PlatformToolset>v140</PlatformToolset>
+        <OutputDirectory>tmp\debug\obj\</OutputDirectory>
+        <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+        <CharacterSet>NotSet</CharacterSet>
+        <ConfigurationType>DynamicLibrary</ConfigurationType>
+        <IntermediateDirectory>tmp\debug\obj\</IntermediateDirectory>
+        <PrimaryOutput>ZESSDRR_CUDA</PrimaryOutput>
+        <PlatformToolset>v140</PlatformToolset>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"
+         Label="Configuration">
+        <PlatformToolset>v140</PlatformToolset>
+        <OutputDirectory>tmp\release\obj\</OutputDirectory>
+        <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+        <CharacterSet>NotSet</CharacterSet>
+        <ConfigurationType>DynamicLibrary</ConfigurationType>
+        <IntermediateDirectory>tmp\release\obj\</IntermediateDirectory>
+        <PrimaryOutput>ZESSDRR_CUDA</PrimaryOutput>
+        <PlatformToolset>v140</PlatformToolset>
+    </PropertyGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+    <ImportGroup Label="ExtensionSettings"/>
+    <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"
+         Label="PropertySheets">
+        <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+             Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    </ImportGroup>
+    <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"
+         Label="PropertySheets">
+        <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+             Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+    </ImportGroup>
+    <PropertyGroup Label="UserMacros"/>
+    <PropertyGroup>
+        <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tmp\debug\obj\</OutDir>
+        <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tmp\debug\obj\</IntDir>
+        <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ZESSDRR_CUDA_d</TargetName>
+        <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+        <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</PostBuildEventUseInBuild>
+        <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tmp\release\obj\</OutDir>
+        <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tmp\release\obj\</IntDir>
+        <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ZESSDRR_CUDA</TargetName>
+        <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+        <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+        <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</PostBuildEventUseInBuild>
+    </PropertyGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+        <ClCompile>
+            <AdditionalIncludeDirectories>.;C:\eigen3.3.7;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include\deprecated;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLDicomTreeImagePropertyExtension;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra\deprecated;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLProfilingManager\Include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLUtilities;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\DicomTree\MLDicomTree;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLMemoryManager\Include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ThirdPartyWarnings;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\OpenCV\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\boost;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\xml2\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\png;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\tiff\libtiff;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\jpeg;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\libiconv\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\zlib;.;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\Qt5\qt\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+            <AdditionalOptions>-Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
+            <AssemblerListingLocation>tmp\debug\obj\</AssemblerListingLocation>
+            <BrowseInformation>false</BrowseInformation>
+            <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+            <DisableSpecificWarnings>4201;4251;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+            <ExceptionHandling>Sync</ExceptionHandling>
+            <MultiProcessorCompilation>true</MultiProcessorCompilation>
+            <ObjectFileName>tmp\debug\obj\</ObjectFileName>
+            <Optimization>Disabled</Optimization>
+            <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;NOMINMAX;MEVIS_TARGET=ZESSDRR_CUDA;MEVIS_64BIT;MEVISLAB_VERSION=301;MEVISLAB_VERSION_STRING=3.1;ML_VERSION_2;MLAB_HAS_OPENCV;BOOST_ALL_DYN_LINK;MEVIS_CUDA_AVAILABLE;DEBUG;MeVisLab;MEVISLAB;__LITTLE_ENDIAN__;ML_LIBRARY_EXPORT_ATTRIBUTE=__declspec(dllexport);ML_LIBRARY_IMPORT_ATTRIBUTE=__declspec(dllimport);ML_RETURN_VALUE_SHOULD_BE_USED=;ML_EXPLICIT_FALLTHROUGH=;_CRT_SECURE_NO_DEPRECATE;ZESSDRR_CUDA_EXPORTS;ML_WARN_DEPRECATED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <PreprocessToFile>false</PreprocessToFile>
+            <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+            <RuntimeTypeInfo>true</RuntimeTypeInfo>
+            <SuppressStartupBanner>true</SuppressStartupBanner>
+            <TreatSpecificWarningsAsErrors>4102;4131;4218;4431;4715;4723;4002;4013;4056;4054;4067;4068;4130;4146;4150;4172;4210;4351;4373;4366;4552;4553;4804;4910;%(TreatSpecificWarningsAsErrors)</TreatSpecificWarningsAsErrors>
+            <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+            <WarningLevel>Level4</WarningLevel>
+        </ClCompile>
+        <Link>
+            <AdditionalDependencies>MLTools_d.lib;ML_d.lib;MLDicomTreeImagePropertyExtension_d.lib;MLLinearAlgebra_d.lib;MLMemoryManager_d.lib;MLProfilingManager_d.lib;MLUtilities_d.lib;MLDicomTree_d.lib;MLAB_opencv_calib3d300_d.lib;MLAB_opencv_features2d300_d.lib;MLAB_opencv_flann300_d.lib;MLAB_opencv_imgcodecs300_d.lib;MLAB_opencv_imgproc300_d.lib;MLAB_opencv_ml300_d.lib;MLAB_opencv_objdetect300_d.lib;MLAB_opencv_photo300_d.lib;MLAB_opencv_video300_d.lib;MLAB_opencv_videoio300_d.lib;MLAB_opencv_core300_d.lib;xml2_d.lib;png_d.lib;tiff_d.lib;jpeg_d.lib;&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64\cudart_static.lib&quot;;iconv_d.lib;zlib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalLibraryDirectories>&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\lib&quot;;&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64&quot;;C:\Users\alvarez\Documents\MeVis\ZESS\DRR\lib;C:\Users\alvarez\Documents\MeVis\CUDAPacket\General\lib;&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\lib&quot;;&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\lib&quot;;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <DataExecutionPrevention>true</DataExecutionPrevention>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+            <IgnoreImportLibrary>true</IgnoreImportLibrary>
+            <LargeAddressAware>true</LargeAddressAware>
+            <LinkDLL>true</LinkDLL>
+            <OutputFile>$(OutDir)ZESSDRR_CUDA_d.dll</OutputFile>
+            <RandomizedBaseAddress>true</RandomizedBaseAddress>
+            <SubSystem>Windows</SubSystem>
+            <SuppressStartupBanner>true</SuppressStartupBanner>
+        </Link>
+        <Midl>
+            <DefaultCharType>Unsigned</DefaultCharType>
+            <EnableErrorChecks>None</EnableErrorChecks>
+            <WarningLevel>0</WarningLevel>
+        </Midl>
+        <ResourceCompile>
+            <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;NOMINMAX;MEVIS_TARGET=ZESSDRR_CUDA;MEVIS_64BIT;MEVISLAB_VERSION=301;MEVISLAB_VERSION_STRING=3.1;ML_VERSION_2;MLAB_HAS_OPENCV;BOOST_ALL_DYN_LINK;MEVIS_CUDA_AVAILABLE;DEBUG;MeVisLab;MEVISLAB;__LITTLE_ENDIAN__;ML_LIBRARY_EXPORT_ATTRIBUTE=__declspec(dllexport);ML_LIBRARY_IMPORT_ATTRIBUTE=__declspec(dllimport);ML_RETURN_VALUE_SHOULD_BE_USED=;ML_EXPLICIT_FALLTHROUGH=;_CRT_SECURE_NO_DEPRECATE;ZESSDRR_CUDA_EXPORTS;ML_WARN_DEPRECATED;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ResourceCompile>
+        <PostBuildEvent>
+            <Command>if not exist &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot; mkdir &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+if exist &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated\ZESSDRR_CUDA_d.dll&quot; (
+  echo removing old updated DLL
+  del &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated\ZESSDRR_CUDA_d.dll&quot;
+)
+echo copy &quot;$(OutDir)ZESSDRR_CUDA_d.dll&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\ZESSDRR_CUDA_d.dll&quot;
+copy &quot;$(OutDir)ZESSDRR_CUDA_d.dll&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\ZESSDRR_CUDA_d.dll&quot;
+if errorLevel 1 (
+  echo DLL locked, copying to /updated subdir - and removing source file
+  if not exist &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated&quot; mkdir &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated&quot;
+  copy &quot;$(OutDir)ZESSDRR_CUDA_d.dll&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated\ZESSDRR_CUDA_d.dll&quot;
+  del &quot;$(OutDir)ZESSDRR_CUDA_d.dll&quot;
+)
+echo copy &quot;$(OutDir)ZESSDRR_CUDA_d.pdb&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+copy &quot;$(OutDir)ZESSDRR_CUDA_d.pdb&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+echo if exist &quot;$(OutDir)ZESSDRR_CUDA_d.lib&quot; copy &quot;$(OutDir)ZESSDRR_CUDA_d.lib&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+if exist &quot;$(OutDir)ZESSDRR_CUDA_d.lib&quot; copy &quot;$(OutDir)ZESSDRR_CUDA_d.lib&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;</Command>
+            <Message>Running postbuild commands...</Message>
+        </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+        <ClCompile>
+            <AdditionalIncludeDirectories>.;C:\eigen3.3.7;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include\deprecated;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLDicomTreeImagePropertyExtension;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra\deprecated;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLProfilingManager\Include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLUtilities;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\DicomTree\MLDicomTree;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLMemoryManager\Include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ThirdPartyWarnings;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\OpenCV\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\boost;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\xml2\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\png;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\tiff\libtiff;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\jpeg;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\libiconv\include;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\zlib;.;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\Qt5\qt\mkspecs\win32-msvc2015;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+            <AdditionalOptions>-Zc:throwingNew %(AdditionalOptions)</AdditionalOptions>
+            <AssemblerListingLocation>tmp\release\obj\</AssemblerListingLocation>
+            <BrowseInformation>false</BrowseInformation>
+            <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+            <DisableSpecificWarnings>4201;4251;4127;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+            <ExceptionHandling>Sync</ExceptionHandling>
+            <MultiProcessorCompilation>true</MultiProcessorCompilation>
+            <ObjectFileName>tmp\release\obj\</ObjectFileName>
+            <Optimization>MaxSpeed</Optimization>
+            <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;NOMINMAX;MEVIS_TARGET=ZESSDRR_CUDA;MEVIS_64BIT;MEVISLAB_VERSION=301;MEVISLAB_VERSION_STRING=3.1;ML_VERSION_2;MLAB_HAS_OPENCV;BOOST_ALL_DYN_LINK;MEVIS_CUDA_AVAILABLE;MeVisLab;MEVISLAB;__LITTLE_ENDIAN__;ML_LIBRARY_EXPORT_ATTRIBUTE=__declspec(dllexport);ML_LIBRARY_IMPORT_ATTRIBUTE=__declspec(dllimport);ML_RETURN_VALUE_SHOULD_BE_USED=;ML_EXPLICIT_FALLTHROUGH=;_CRT_SECURE_NO_DEPRECATE;ZESSDRR_CUDA_EXPORTS;ML_WARN_DEPRECATED;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+            <PreprocessToFile>false</PreprocessToFile>
+            <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+            <RuntimeTypeInfo>true</RuntimeTypeInfo>
+            <SuppressStartupBanner>true</SuppressStartupBanner>
+            <TreatSpecificWarningsAsErrors>4102;4131;4218;4431;4715;4723;4002;4013;4056;4054;4067;4068;4130;4146;4150;4172;4210;4351;4373;4366;4552;4553;4804;4910;%(TreatSpecificWarningsAsErrors)</TreatSpecificWarningsAsErrors>
+            <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+            <WarningLevel>Level4</WarningLevel>
+        </ClCompile>
+        <Link>
+            <AdditionalDependencies>MLTools.lib;ML.lib;MLDicomTreeImagePropertyExtension.lib;MLLinearAlgebra.lib;MLMemoryManager.lib;MLProfilingManager.lib;MLUtilities.lib;MLDicomTree.lib;MLAB_opencv_calib3d300.lib;MLAB_opencv_features2d300.lib;MLAB_opencv_flann300.lib;MLAB_opencv_imgcodecs300.lib;MLAB_opencv_imgproc300.lib;MLAB_opencv_ml300.lib;MLAB_opencv_objdetect300.lib;MLAB_opencv_photo300.lib;MLAB_opencv_video300.lib;MLAB_opencv_videoio300.lib;MLAB_opencv_core300.lib;xml2.lib;png.lib;tiff.lib;jpeg.lib;&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64\cudart_static.lib&quot;;iconv.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+            <AdditionalLibraryDirectories>&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\lib&quot;;&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\lib\x64&quot;;C:\Users\alvarez\Documents\MeVis\ZESS\DRR\lib;C:\Users\alvarez\Documents\MeVis\CUDAPacket\General\lib;&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\lib&quot;;&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\lib&quot;;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+            <DataExecutionPrevention>true</DataExecutionPrevention>
+            <EnableCOMDATFolding>true</EnableCOMDATFolding>
+            <GenerateDebugInformation>true</GenerateDebugInformation>
+            <IgnoreImportLibrary>true</IgnoreImportLibrary>
+            <LargeAddressAware>true</LargeAddressAware>
+            <LinkDLL>true</LinkDLL>
+            <LinkIncremental>false</LinkIncremental>
+            <OptimizeReferences>true</OptimizeReferences>
+            <OutputFile>$(OutDir)ZESSDRR_CUDA.dll</OutputFile>
+            <RandomizedBaseAddress>true</RandomizedBaseAddress>
+            <SubSystem>Windows</SubSystem>
+            <SuppressStartupBanner>true</SuppressStartupBanner>
+        </Link>
+        <Midl>
+            <DefaultCharType>Unsigned</DefaultCharType>
+            <EnableErrorChecks>None</EnableErrorChecks>
+            <WarningLevel>0</WarningLevel>
+        </Midl>
+        <ResourceCompile>
+            <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;NOMINMAX;MEVIS_TARGET=ZESSDRR_CUDA;MEVIS_64BIT;MEVISLAB_VERSION=301;MEVISLAB_VERSION_STRING=3.1;ML_VERSION_2;MLAB_HAS_OPENCV;BOOST_ALL_DYN_LINK;MEVIS_CUDA_AVAILABLE;MeVisLab;MEVISLAB;__LITTLE_ENDIAN__;ML_LIBRARY_EXPORT_ATTRIBUTE=__declspec(dllexport);ML_LIBRARY_IMPORT_ATTRIBUTE=__declspec(dllimport);ML_RETURN_VALUE_SHOULD_BE_USED=;ML_EXPLICIT_FALLTHROUGH=;_CRT_SECURE_NO_DEPRECATE;ZESSDRR_CUDA_EXPORTS;ML_WARN_DEPRECATED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+        </ResourceCompile>
+        <PostBuildEvent>
+            <Command>if not exist &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot; mkdir &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+if exist &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated\ZESSDRR_CUDA.dll&quot; (
+  echo removing old updated DLL
+  del &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated\ZESSDRR_CUDA.dll&quot;
+)
+echo copy &quot;$(OutDir)ZESSDRR_CUDA.dll&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\ZESSDRR_CUDA.dll&quot;
+copy &quot;$(OutDir)ZESSDRR_CUDA.dll&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\ZESSDRR_CUDA.dll&quot;
+if errorLevel 1 (
+  echo DLL locked, copying to /updated subdir - and removing source file
+  if not exist &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated&quot; mkdir &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated&quot;
+  copy &quot;$(OutDir)ZESSDRR_CUDA.dll&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib\updated\ZESSDRR_CUDA.dll&quot;
+  del &quot;$(OutDir)ZESSDRR_CUDA.dll&quot;
+)
+echo if exist &quot;$(OutDir)ZESSDRR_CUDA.pdb&quot; copy &quot;$(OutDir)ZESSDRR_CUDA.pdb&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+if exist &quot;$(OutDir)ZESSDRR_CUDA.pdb&quot; copy &quot;$(OutDir)ZESSDRR_CUDA.pdb&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+echo if exist &quot;$(OutDir)ZESSDRR_CUDA.lib&quot; copy &quot;$(OutDir)ZESSDRR_CUDA.lib&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;
+if exist &quot;$(OutDir)ZESSDRR_CUDA.lib&quot; copy &quot;$(OutDir)ZESSDRR_CUDA.lib&quot; &quot;C:\Users\alvarez\Documents\MeVis\ZESS\DRR/lib&quot;</Command>
+            <Message>Running postbuild commands...</Message>
+        </PostBuildEvent>
+    </ItemDefinitionGroup>
+    <ItemGroup>
+        <ClCompile Include="DRR_functions.cpp"/>
+        <ClCompile Include="InOutImageProcessing.cpp"/>
+        <ClCompile Include="ReadTagsDicom.cpp"/>
+        <ClCompile Include="ZESSDRR_CUDAInit.cpp"/>
+        <ClCompile Include="mlDRR_CUDA.cpp"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ClInclude Include="CUDAdrr.cuh"/>
+        <ClInclude Include="ZESSDRR_CUDAInit.h"/>
+        <ClInclude Include="ZESSDRR_CUDASystem.h"/>
+        <ClInclude Include="mlDRR_CUDA.h"/>
+    </ItemGroup>
+    <ItemGroup>
+        <CustomBuild Include="CUDAdrr.cu">
+            <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CUDAdrr.cu;%(AdditionalInputs)</AdditionalInputs>
+            <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0/bin/nvcc.exe&quot; --default-stream per-thread --std=c++11 -m64 --cudart static -G -lineinfo -Xcompiler -nologo,-Zc:wchar_t,-FS,-Zc:throwingNew,-Zi,-MDd,-GR,-W3,-w34189,-w44996,-w44456,-w44457,-w44458,-wd4577,-wd4467,-EHsc -gencode=arch=compute_30,code=sm_30 -gencode=arch=compute_35,code=sm_35 -gencode=arch=compute_50,code=sm_50 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_70,code=compute_70  -DUNICODE -DWIN32 -DWIN64 -DNOMINMAX -DMEVIS_TARGET=ZESSDRR_CUDA -DMEVIS_64BIT -DMEVISLAB_VERSION=301 -DMEVISLAB_VERSION_STRING=3.1 -DML_VERSION_2 -DMLAB_HAS_OPENCV -DBOOST_ALL_DYN_LINK -DMEVIS_CUDA_AVAILABLE -DDEBUG -DMeVisLab -DMEVISLAB -D__LITTLE_ENDIAN__ -DML_LIBRARY_EXPORT_ATTRIBUTE=__declspec(dllexport) -DML_LIBRARY_IMPORT_ATTRIBUTE=__declspec(dllimport) -DML_RETURN_VALUE_SHOULD_BE_USED= -DML_EXPLICIT_FALLTHROUGH= -D_CRT_SECURE_NO_DEPRECATE -DZESSDRR_CUDA_EXPORTS -DML_WARN_DEPRECATED -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I. -IC:\eigen3.3.7 -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include\deprecated&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLDicomTreeImagePropertyExtension&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra\deprecated&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLProfilingManager\Include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLUtilities&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\DicomTree\MLDicomTree&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLMemoryManager\Include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ThirdPartyWarnings&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\OpenCV\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\boost&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\xml2\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\png&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\tiff\libtiff&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\jpeg&quot; -I&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\libiconv\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\zlib&quot; -I. -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\Qt5\qt\mkspecs\win32-msvc2015&quot; -c -o tmp/debug/obj/CUDAdrr.obj CUDAdrr.cu</Command>
+            <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CUDA</Message>
+            <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">tmp\debug\obj\CUDAdrr.obj;%(Outputs)</Outputs>
+            <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CUDAdrr.cu;%(AdditionalInputs)</AdditionalInputs>
+            <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0/bin/nvcc.exe&quot; --default-stream per-thread --std=c++11 -m64 --cudart static -Xcompiler -nologo,-Zc:wchar_t,-FS,-Zc:throwingNew,-O2,-MD,-Zi,-GR,-W3,-w34189,-w44996,-w44456,-w44457,-w44458,-wd4577,-wd4467,-EHsc -gencode=arch=compute_30,code=sm_30 -gencode=arch=compute_35,code=sm_35 -gencode=arch=compute_50,code=sm_50 -gencode=arch=compute_60,code=sm_60 -gencode=arch=compute_70,code=sm_70 -gencode=arch=compute_70,code=compute_70  -DUNICODE -DWIN32 -DWIN64 -DNOMINMAX -DMEVIS_TARGET=ZESSDRR_CUDA -DMEVIS_64BIT -DMEVISLAB_VERSION=301 -DMEVISLAB_VERSION_STRING=3.1 -DML_VERSION_2 -DMLAB_HAS_OPENCV -DBOOST_ALL_DYN_LINK -DMEVIS_CUDA_AVAILABLE -DMeVisLab -DMEVISLAB -D__LITTLE_ENDIAN__ -DML_LIBRARY_EXPORT_ATTRIBUTE=__declspec(dllexport) -DML_LIBRARY_IMPORT_ATTRIBUTE=__declspec(dllimport) -DML_RETURN_VALUE_SHOULD_BE_USED= -DML_EXPLICIT_FALLTHROUGH= -D_CRT_SECURE_NO_DEPRECATE -DZESSDRR_CUDA_EXPORTS -DML_WARN_DEPRECATED -D_MSC_VER=1900 -D_WIN32 -D_WIN64 -I. -IC:\eigen3.3.7 -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVisLab\Standard\Sources\ML\MLTools\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include\deprecated&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ML\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLDicomTreeImagePropertyExtension&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra\deprecated&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLLinearAlgebra&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLProfilingManager\Include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLUtilities&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\DicomTree\MLDicomTree&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\MLMemoryManager\Include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\Foundation\Sources\ThirdPartyWarnings&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\OpenCV\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\boost&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\xml2\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\png&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\tiff\libtiff&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\jpeg&quot; -I&quot;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\misc\libiconv\include&quot; -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\fileformat\zlib&quot; -I. -I&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages\MeVis\ThirdParty\Sources\Qt5\qt\mkspecs\win32-msvc2015&quot; -c -o tmp/release/obj/CUDAdrr.obj CUDAdrr.cu</Command>
+            <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CUDA</Message>
+            <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">tmp\release\obj\CUDAdrr.obj;%(Outputs)</Outputs>
+        </CustomBuild>
+    </ItemGroup>
+    <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+    <ImportGroup Label="ExtensionTargets"/>
+    <ItemGroup>
+        <CustomBuild Include="ZESSDRR_CUDA.pro">
+            <Command>set MLAB_COMPILER_VERSION=VC14-64
+&quot;C:\Program Files\MeVisLab3.1VC14-64\Packages/MeVis/ThirdParty/Python/MeVisPython.exe&quot; &quot;C:/Program Files/MeVisLab3.1VC14-64/Packages/MeVis/BuildSystem\BuildTools\Scripts\createProject.py&quot; ZESSDRR_CUDA.pro</Command>
+            <Outputs>tmp\.#ZESSDRR_CUDA.vcxproj</Outputs>
+            <Message>Compiling ZESSDRR_CUDA.pro...</Message>
+        </CustomBuild>
+    </ItemGroup>
+</Project>
